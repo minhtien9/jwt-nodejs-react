@@ -34,7 +34,7 @@ const getUserList = async () => {
     })
 
     try {
-        const [rows, fields] = await connection.execute('SELECT * FROM user')
+        const [rows, fields] = await connection.execute('SELECT * FROM users')
         return rows
     } catch (error) {
         console.log(error)

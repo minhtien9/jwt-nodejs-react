@@ -15,11 +15,13 @@ const createNewUser = async (email, password, username) => {
     const hashPass = hashUserPassword(password)
 
     try {
-        await db.User.create({
+        const user = await db.Users.create({
             email: email,
             password: hashPass,
             username: username,
         })
+
+        console.log(user)
     } catch (error) {
         console.log(error)
     }
@@ -34,7 +36,7 @@ const getUserList = async () => {
     })
 
     try {
-        const [rows, fields] = await connection.execute('SELECT * FROM user')
+        const [rows, fields] = await connection.execute('SELECT * FROM users')
         return rows
     } catch (error) {
         console.log(error)

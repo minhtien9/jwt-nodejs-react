@@ -5,9 +5,7 @@
         "database": "jwt",
         "host": "127.0.0.1",
         "dialect": "mysql",
-        "define": {
-            "freezeTableName": true
-        }
+        "define": ""
     },
     "test": {
         "username": "root",

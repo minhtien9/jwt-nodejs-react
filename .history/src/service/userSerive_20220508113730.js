@@ -15,7 +15,7 @@ const createNewUser = async (email, password, username) => {
     const hashPass = hashUserPassword(password)
 
     try {
-        await db.User.create({
+        await db.Users.create({
             email: email,
             password: hashPass,
             username: username,
@@ -34,7 +34,7 @@ const getUserList = async () => {
     })
 
     try {
-        const [rows, fields] = await connection.execute('SELECT * FROM user')
+        const [rows, fields] = await connection.execute('SELECT * FROM users')
         return rows
     } catch (error) {
         console.log(error)
