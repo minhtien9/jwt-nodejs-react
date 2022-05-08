@@ -91,14 +91,6 @@ const getUserById = async (id) => {
 }
 
 const updateUserInfor = async (email, username, id) => {
-    await db.User.update(
-        { email: email, username: username },
-        {
-            where: {
-                id: id,
-            },
-        }
-    )
     // const connection = await mysql.createConnection({
     //     host: 'localhost',
     //     user: 'root',

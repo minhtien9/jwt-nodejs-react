@@ -92,10 +92,10 @@ const getUserById = async (id) => {
 
 const updateUserInfor = async (email, username, id) => {
     await db.User.update(
-        { email: email, username: username },
+        { email: email, password: password, username: username },
         {
             where: {
-                id: id,
+                lastName: null,
             },
         }
     )

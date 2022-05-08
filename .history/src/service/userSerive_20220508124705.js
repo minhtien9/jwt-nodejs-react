@@ -95,7 +95,7 @@ const updateUserInfor = async (email, username, id) => {
         { email: email, username: username },
         {
             where: {
-                id: id,
+                lastName: null,
             },
         }
     )
